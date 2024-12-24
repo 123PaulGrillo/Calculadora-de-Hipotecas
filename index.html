@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.webp">
+  <link href="./dist/output.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+  <title>Ing. Vicencio Grado | Calculadora de Hipotecas</title>
+
+</head>
+<body class="bg-[#D2E8E3]">
+  <section class="flex flex-col sm:flex-row lg:flex lg:justify-center lg:p-5  h-[100vh]">
+    <section class="flex flex-col sm:flex-row lg:flex lg:justify-between lg:items-center lg:p-5 bg-[#fff] rounded-md">
+  <section class="p-5 lg:w-[50%]">
+    <h1 class="text-[#0a1320] text-xl font-medium"> Calculadora de Hipotecas</h1>
+    <a class="text-gray-500 text-[14px] underline" id="ctaborrarTodo">Borrar todo</a>
+    <form action="" class="w-full mt-4">
+      <div class="relative mb-4">
+        <label for="inputMortgageAmount" class="text-gray-500 mb-2 block">Monto de la Hipoteca</label>
+        <div class="flex items-center border border-solid border-gray-500 rounded-md">
+          <span class="px-3 text-gray-600 bg-[#C9DFF2] rounded-md p-2">$</span>
+          <input type="text" id="inputMortgageAmount" class="w-full py-2 px-2 border-none focus:outline-none rounded-md">
+        </div>
+      </div>
+      <div class="relative mb-4">
+        <label for="inputMortgageTerm" class="text-gray-500 mb-2 block">Plazo de la Hipoteca</label>
+        <div class="flex items-center border border-solid border-gray-500 rounded-md">
+          <input type="text" id="inputMortgageTerm" class="w-full py-2 px-2 border-none focus:outline-none rounded-md">
+          <span class="px-3 text-gray-600 bg-[#C9DFF2] rounded-md p-2">años</span>
+        </div>
+      </div>
+      <div class="relative mb-4">
+        <label for="inputMortgageAmount" class="text-gray-500 mb-2 block">Tasa de Interés</label>
+        <div class="flex items-center border border-solid border-gray-500 rounded-md">
+          <input type="text" id="inputInterestRate" class="w-full py-2 px-2 border-none focus:outline-none rounded-md">
+          <span class="px-3 text-gray-600 bg-[#C9DFF2] rounded-md p-2">%</span>
+        </div>
+      </div>
+    </form>
+    
+    <h5 class="text-gray-500 mb-2">Tipo de Hipoteca</h5>
+    <div class="flex flex-col mb-4">
+      <label for="repayment" class="flex items-center border border-gray-300 p-2 rounded-md font-medium lg-hover:bg-[#d7da2f] cursor-pointer ">
+        <input type="checkbox" name="repayment" id="inputRepayment" class="mr-5">
+        Reembolso
+      </label>
+      <label for="interestOnly" class="mt-2 border border-solid border-gray-300 p-2 rounded-md font-medium">
+      <input type="checkbox" name="interestOnly" id="inputInterestOnly" class="mr-4">
+      Solo Intereses
+  </label> 
+</div>
+
+<div class="ctaButton flex justify-center">
+  <a href="#" class="flex items-center gap-x-2 bg-[#73da2f] py-2 px-12 rounded-full font-semibold text-gray-800" id="ctaCalculate"><img src="./assets/images/icon-calculator.svg" alt="" class="size-4 ">Calcular Reembolsos</a>
+</div>
+  </section>
+  <section  class="bg-[#203b53] lg:w-[50%] lg:h-[100%] lg:rounded-bl-lg lg:rounded-tr-lg p-5 text-[#fff]" id="normalSection">
+    <div class="flex justify-center items-center pt-10 lg:pt-[98px]">
+      <img src="./assets/images/illustration-empty.svg" alt="" class="">
+    </div>
+    <div>
+      <h5 class="font-medium text-xl text-center mb-3">Los resultados se muestran aquí:</h5>
+      <p class="text-center mb-5 text-gray-400">Complete el formulario y haga clic en "calcular reembolsos" para conocer cuáles serían sus pagos mensuales.
+      </p>
+    </div>
+  </section>
+  <section class="bg-[#203b53] lg:w-[50%] lg:h-[100%] lg:rounded-bl-lg lg:rounded-tr-lg p-5 text-[#fff] hidden lg:pt-[98px] " id="calculateMount">
+    <div class="containerMount" id="containerMount">
+      <h5 class="font-semibold text-xl mb-2">Tus Resultados</h5>
+      <p class="text-gray-400 mb-4">
+        Sus resultados se muestran a continuación según la información que proporcionó.
+        Para ajustar los resultados, edite el formulario y haga clic en "calcular reembolsos" nuevamente.
+      </p>
+      <div class="bg-[#0a1320b0] w-full h-[100%] p-5 rounded-md mb-4" id="contenedorHijo">
+        <p class="text-gray-400 mb-1">Tus pagos mensuales</p>
+        <p class="text-[#73da2f] text-3xl font-semibold mb-5" id="pPagoMensual">$</p>
+        <p class="text-gray-400 mb-1">Total que pagarás durante el plazo:</p>
+        <p class="font-bold text-lg mb-5" id="pTotalAmount">$</p>
+      </div>
+    </div>
+  </section>
+</section>
+</section>
+</body>
+<script type="module" src="./scripts/index.js"></script>
+<script src="./scripts/borrarTodo.js"></script>
+<!-- <script src="./scripts/reembolsosIntereses.js"></script> -->
+</html>
+
